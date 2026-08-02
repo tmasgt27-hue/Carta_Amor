@@ -324,3 +324,80 @@ function accionBotonTicket() {
     sacarTicket();
 
 }
+
+
+// ==========================================================
+// REINICIAR
+// ==========================================================
+
+function reiniciar() {
+
+    // Volver al inicio
+    mostrarEscena("inicio");
+
+    // Reiniciar carta
+    cartaAbierta = false;
+    textoCarta.textContent = "";
+
+    botonAbrir.style.display = "inline-block";
+    botonContinuar.style.display = "none";
+
+    // Reiniciar tickets
+    ticketTitulo.textContent = "";
+    ticketContenido.textContent = "";
+
+    botonTicket.textContent = "✨ Revelar mensaje";
+
+    mezclarTickets();
+
+}
+
+
+
+
+
+// ==========================================================
+// EVENTOS
+// ==========================================================
+
+btnInicio.addEventListener("click", comenzar);
+
+botonAbrir.addEventListener("click", abrirCarta);
+
+botonContinuar.addEventListener("click", irAstronauta);
+
+document
+    .getElementById("botonFlores")
+    .addEventListener("click", mostrarTarjeta);
+
+document
+    .getElementById("botonPoema")
+    .addEventListener("click", () => {
+
+        mostrarEscena("tickets");
+
+    });
+
+botonTicket.addEventListener(
+
+    "click",
+
+    accionBotonTicket
+
+);
+
+document
+    .getElementById("botonReiniciar")
+    .addEventListener("click", reiniciar);
+
+
+
+
+
+// ==========================================================
+// INICIALIZACIÓN
+// ==========================================================
+
+iniciarFrases();
+
+mezclarTickets();
