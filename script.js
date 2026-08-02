@@ -143,3 +143,28 @@ let ultimoTicket = false;
 // Temporizadores
 let intervaloFrases = null;
 let temporizadorEscritura = null;
+
+
+// ==========================================================
+// ESCENAS
+// ==========================================================
+
+function mostrarEscena(id){
+
+    escenas.forEach(escena=>{
+
+        escena.classList.remove("activa");
+
+    });
+
+    const escenaActual=document.getElementById(id);
+
+    if(escenaActual){
+
+        escenaActual.classList.add("activa");
+
+    }
+
+}
+
+// ... (y continúa hasta terminar abrirCarta())
