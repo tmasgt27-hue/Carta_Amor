@@ -585,3 +585,399 @@ button:active{
     }
 
 }
+
+
+/* ==========================================================
+   PARA TI ✨
+   CONECTANDO CON EL UNIVERSO
+   STYLE.CSS V3.1
+   ----------------------------------------------------------
+   PARTE 2
+   • Carta
+   • Astronauta
+   • Lirios
+   • Poema
+   • Nuevo recuerdo
+========================================================== */
+
+
+
+
+
+/* ==========================================================
+   CARTA
+========================================================== */
+
+.carta{
+
+    width:235px;
+
+    margin-bottom:12px;
+
+    animation:
+
+    flotar 7s ease-in-out infinite;
+
+    filter:
+
+    drop-shadow(
+        0 0 22px rgba(242,210,125,.18)
+    );
+
+}
+
+
+
+
+
+/* Papel */
+
+.papelCarta{
+
+    width:100%;
+
+    max-width:370px;
+
+    height:190px;
+
+    margin-top:22px;
+
+    padding:18px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    border-radius:22px;
+
+    background:
+
+    rgba(255,255,255,.07);
+
+    border:
+
+    1px solid rgba(255,255,255,.14);
+
+    backdrop-filter:
+
+    blur(12px);
+
+    box-shadow:
+
+    0 0 20px rgba(255,255,255,.05);
+
+}
+
+
+
+
+
+/* Scroll elegante */
+
+.papelCarta::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+.papelCarta::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.papelCarta::-webkit-scrollbar-thumb{
+
+    background:
+
+    rgba(255,255,255,.28);
+
+    border-radius:999px;
+
+}
+
+
+
+
+
+#textoCarta{
+
+    white-space:pre-line;
+
+    text-align:center;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* Ambos botones ocuparán
+   exactamente la misma posición */
+
+#botonAbrir,
+#botonContinuar{
+
+    width:230px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   ASTRONAUTA
+========================================================== */
+
+.astronautaContainer{
+
+    position:relative;
+
+    width:250px;
+
+    height:270px;
+
+    margin-bottom:20px;
+
+    animation:
+
+    flotarAstronauta 8s ease-in-out infinite;
+
+}
+
+
+
+
+
+/* Astronauta */
+
+.astronauta{
+
+    position:absolute;
+
+    width:200px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:
+
+    translate(-50%,-50%);
+
+}
+
+
+
+
+
+/* Lirios */
+
+.lirios{
+
+    position:absolute;
+
+    width:92px;
+
+    left:55%;
+
+    top:60%;
+
+    transform:
+
+    translate(-50%,-50%);
+
+    filter:
+
+    drop-shadow(
+        0 0 10px rgba(255,255,255,.18)
+    );
+
+}
+
+
+
+
+
+@keyframes flotarAstronauta{
+
+    0%{
+
+        transform:
+
+        translate(-6px,0);
+
+    }
+
+    25%{
+
+        transform:
+
+        translate(2px,-4px);
+
+    }
+
+    50%{
+
+        transform:
+
+        translate(7px,0);
+
+    }
+
+    75%{
+
+        transform:
+
+        translate(2px,4px);
+
+    }
+
+    100%{
+
+        transform:
+
+        translate(-6px,0);
+
+    }
+
+}
+
+
+
+
+
+#astronauta h2{
+
+    max-width:350px;
+
+}
+
+#astronauta p{
+
+    max-width:340px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   POEMA
+========================================================== */
+
+.poema{
+
+    width:285px;
+
+    animation:
+
+    flotar 8s ease-in-out infinite;
+
+    filter:
+
+    drop-shadow(
+        0 0 18px rgba(255,255,255,.18)
+    );
+
+}
+
+
+
+
+
+/* ==========================================================
+   NUEVO RECUERDO
+========================================================== */
+
+.desbloqueado{
+
+    margin-top:24px;
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    background:
+
+    rgba(255,255,255,.07);
+
+    border:
+
+    1px solid rgba(255,255,255,.16);
+
+    color:
+
+    var(--dorado);
+
+    font-size:.95rem;
+
+    letter-spacing:.4px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:480px){
+
+    .carta{
+
+        width:215px;
+
+    }
+
+    .papelCarta{
+
+        max-width:330px;
+
+        height:180px;
+
+        padding:16px;
+
+    }
+
+    #textoCarta{
+
+        font-size:.95rem;
+
+    }
+
+    .astronautaContainer{
+
+        width:220px;
+
+        height:240px;
+
+    }
+
+    .astronauta{
+
+        width:180px;
+
+    }
+
+    .lirios{
+
+        width:84px;
+
+    }
+
+    .poema{
+
+        width:255px;
+
+    }
+
+}
