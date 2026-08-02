@@ -981,3 +981,309 @@ button:active{
     }
 
 }
+
+
+/* ==========================================================
+   PARA TI ✨
+   CONECTANDO CON EL UNIVERSO
+   STYLE.CSS V3.1
+   ----------------------------------------------------------
+   PARTE 3 (DEFINITIVA)
+   • Máquina
+   • Tickets
+   • Escena Final
+   • Ajustes finales
+========================================================== */
+
+
+
+
+
+/* ==========================================================
+   MÁQUINA DE TICKETS
+========================================================== */
+
+.maquina{
+
+    width:290px;
+
+    margin-bottom:18px;
+
+    animation:
+    flotar 8s ease-in-out infinite;
+
+}
+
+
+
+
+
+/* ==========================================================
+   CONTENEDOR DEL TICKET
+========================================================== */
+
+.ticketContainer{
+
+    position:relative;
+
+    width:255px;
+
+    margin-top:20px;
+
+}
+
+
+
+
+
+.ticketImg{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+
+
+
+/* ==========================================================
+   ÁREA DEL TEXTO
+========================================================== */
+
+#ticketTexto{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:
+
+    66px
+    36px
+    50px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+#ticketTitulo{
+
+    color:#222;
+
+    font-size:.90rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   CONTENIDO
+========================================================== */
+
+#ticketContenido{
+
+    color:#333;
+
+    font-size:.76rem;
+
+    line-height:1.45;
+
+    margin:0;
+
+}
+
+
+
+
+
+/* ==========================================================
+   BOTÓN
+========================================================== */
+
+#botonTicket{
+
+    width:230px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   ESCENA FINAL
+========================================================== */
+
+.pareja{
+
+    width:320px;
+
+    margin-bottom:25px;
+
+    animation:
+
+    flotar 9s ease-in-out infinite;
+
+    filter:
+
+    drop-shadow(
+        0 0 24px rgba(255,255,255,.18)
+    );
+
+}
+
+
+
+
+
+#final p{
+
+    max-width:350px;
+
+    line-height:1.85;
+
+    margin-top:0;
+
+}
+
+
+
+
+
+#botonReiniciar{
+
+    margin-top:34px;
+
+}
+
+
+
+
+
+/* ==========================================================
+   DETALLES GENERALES
+========================================================== */
+
+/* Mantener siempre los botones
+   en su sitio */
+
+button{
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+/* Lectura más agradable */
+
+h1,
+h2,
+h3{
+
+    font-weight:normal;
+
+}
+
+
+
+
+
+/* El texto permanece encima
+   del fondo */
+
+h1,
+h2,
+h3,
+p,
+button{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:480px){
+
+    .maquina{
+
+        width:255px;
+
+    }
+
+    .ticketContainer{
+
+        width:225px;
+
+    }
+
+    #ticketTexto{
+
+        padding:
+
+        58px
+        30px
+        44px;
+
+    }
+
+    #ticketTitulo{
+
+        font-size:.80rem;
+
+    }
+
+    #ticketContenido{
+
+        font-size:.70rem;
+
+        line-height:1.35;
+
+    }
+
+    .pareja{
+
+        width:275px;
+
+    }
+
+}
