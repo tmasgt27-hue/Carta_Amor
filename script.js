@@ -243,3 +243,84 @@ function mostrarTarjeta() {
     mostrarEscena("tarjeta");
 
 }
+
+
+// ==========================================================
+// TICKETS
+// ==========================================================
+
+function mezclarTickets() {
+
+    ticketsDisponibles = [...TICKETS];
+
+    for (let i = ticketsDisponibles.length - 1; i > 0; i--) {
+
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [ticketsDisponibles[i], ticketsDisponibles[j]] = [
+            ticketsDisponibles[j],
+            ticketsDisponibles[i]
+        ];
+
+    }
+
+    indiceTicket = 0;
+    ultimoTicket = false;
+
+}
+
+
+
+
+
+function sacarTicket() {
+
+    if (ticketsDisponibles.length === 0) {
+
+        mezclarTickets();
+
+    }
+
+    const ticket = ticketsDisponibles[indiceTicket];
+
+    ticketTitulo.textContent = ticket.titulo;
+
+    escribirTexto(
+
+        ticketContenido,
+
+        ticket.contenido,
+
+        28
+
+    );
+
+    indiceTicket++;
+
+    if (indiceTicket >= ticketsDisponibles.length) {
+
+        ultimoTicket = true;
+
+        botonTicket.textContent = "✨ Continuar";
+
+    }
+
+}
+
+
+
+
+
+function accionBotonTicket() {
+
+    if (ultimoTicket) {
+
+        mostrarEscena("final");
+
+        return;
+
+    }
+
+    sacarTicket();
+
+}
