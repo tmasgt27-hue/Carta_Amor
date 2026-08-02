@@ -168,3 +168,78 @@ function mostrarEscena(id){
 }
 
 // ... (y continúa hasta terminar abrirCarta())
+
+
+// ==========================================================
+// ASTRONAUTA
+// ==========================================================
+
+function iniciarCaminata() {
+
+    // Evita dejar intervalos anteriores ejecutándose
+    clearInterval(animacionAstronauta);
+
+    let spriteActual = 1;
+    const totalSprites = 3;
+
+    astronautaImg.src = `img/astronauta${spriteActual}.png`;
+
+    animacionAstronauta = setInterval(() => {
+
+        spriteActual++;
+
+        if (spriteActual > totalSprites) {
+            spriteActual = 1;
+        }
+
+        astronautaImg.src = `img/astronauta${spriteActual}.png`;
+
+    }, 230);
+
+}
+
+
+
+
+
+function detenerCaminata() {
+
+    clearInterval(animacionAstronauta);
+
+    animacionAstronauta = null;
+
+    astronautaImg.src = "img/astronauta3.png";
+
+}
+
+
+
+
+
+function irAstronauta() {
+
+    mostrarEscena("astronauta");
+
+    iniciarCaminata();
+
+    setTimeout(() => {
+
+        detenerCaminata();
+
+    }, 4000);
+
+}
+
+
+
+
+
+// ==========================================================
+// POEMA
+// ==========================================================
+
+function mostrarTarjeta() {
+
+    mostrarEscena("tarjeta");
+
+}
