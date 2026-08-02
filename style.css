@@ -1,1 +1,587 @@
+/* ==========================================================
+   PARA TI ✨
+   CONECTANDO CON EL UNIVERSO
+   STYLE.CSS V3.1
+   ----------------------------------------------------------
+   PARTE 1
+   • Reset
+   • Variables
+   • Body
+   • Escenas
+   • Tipografía
+   • Botones
+   • Universo
+   • Animaciones base
+========================================================== */
 
+
+
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root{
+
+    /* Paleta */
+
+    --azul-profundo:#050816;
+    --azul:#13234f;
+    --morado:#5a3ea8;
+    --dorado:#f2d27d;
+
+    --texto:#ffffff;
+
+    --panel:rgba(255,255,255,.08);
+    --panel-hover:rgba(255,255,255,.16);
+
+    --borde:rgba(255,255,255,.20);
+
+    --radio:28px;
+
+    --duracion:.35s ease;
+
+    --sombra:
+    0 0 25px rgba(255,255,255,.08);
+
+}
+
+
+
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+
+    font-family:
+    Georgia,
+    serif;
+
+    color:var(--texto);
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(88,70,180,.18),
+        transparent 45%
+    ),
+
+    radial-gradient(
+        circle at bottom,
+        rgba(30,55,130,.20),
+        transparent 50%
+    ),
+
+    linear-gradient(
+        180deg,
+        #13234f 0%,
+        #091228 45%,
+        #050816 100%
+    );
+
+}
+
+
+
+
+
+/* ==========================================================
+   ESCENAS
+========================================================== */
+
+.escena{
+
+    display:none;
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    padding:30px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+.escena.activa{
+
+    display:flex;
+
+    animation:
+
+    aparecerEscena
+    .8s ease;
+
+}
+
+
+
+
+
+/* ==========================================================
+   TODO SOBRE EL FONDO
+========================================================== */
+
+.escena>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+
+
+/* ==========================================================
+   TIPOGRAFÍA
+========================================================== */
+
+h1{
+
+    font-size:2rem;
+
+    font-weight:normal;
+
+    line-height:1.3;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+h2{
+
+    font-size:1.45rem;
+
+    font-weight:normal;
+
+    line-height:1.45;
+
+    margin-top:22px;
+
+}
+
+p{
+
+    max-width:360px;
+
+    margin-top:18px;
+
+    font-size:1rem;
+
+    line-height:1.75;
+
+    opacity:.95;
+
+}
+
+
+
+
+
+/* ==========================================================
+   IMÁGENES
+========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+
+
+
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+button{
+
+    margin-top:34px;
+
+    width:230px;
+
+    padding:15px 22px;
+
+    border-radius:999px;
+
+    border:1px solid var(--borde);
+
+    background:var(--panel);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    transition:
+
+    background var(--duracion),
+    border-color var(--duracion),
+    transform var(--duracion);
+
+    flex-shrink:0;
+
+}
+
+button:hover{
+
+    background:var(--panel-hover);
+
+    border-color:
+
+    rgba(255,255,255,.45);
+
+    transform:
+
+    translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+#inicio h1{
+
+    margin-bottom:20px;
+
+}
+
+#estadoUniverso{
+
+    min-height:55px;
+
+    opacity:.9;
+
+}
+
+
+
+
+
+/* ==========================================================
+   UNIVERSO
+========================================================== */
+
+.estrellas{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+
+    background-size:
+
+    42px 42px;
+
+    animation:
+
+    moverEstrellas
+    80s linear infinite;
+
+}
+
+
+
+
+
+/* Nebulosa superior */
+
+.escena::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    top:-180px;
+
+    left:-120px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(117,90,210,.18),
+
+        transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    z-index:0;
+
+}
+
+
+
+
+
+/* Nebulosa inferior */
+
+.escena::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    bottom:-150px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(65,120,255,.14),
+
+        transparent 70%
+
+    );
+
+    filter:blur(50px);
+
+    z-index:0;
+
+}
+
+
+
+
+
+/* ==========================================================
+   BRILLOS
+========================================================== */
+
+.carta,
+.poema,
+.ticketImg,
+.pareja{
+
+    filter:
+
+    drop-shadow(
+        0 0 18px rgba(255,255,255,.18)
+    );
+
+}
+
+
+
+
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+@keyframes aparecerEscena{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes moverEstrellas{
+
+    from{
+
+        transform:
+
+        translateY(0);
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-220px);
+
+    }
+
+}
+
+
+
+
+
+@keyframes flotar{
+
+    0%{
+
+        transform:
+
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+
+        translateY(-7px);
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE GENERAL
+========================================================== */
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:1.8rem;
+
+    }
+
+    h2{
+
+        font-size:1.3rem;
+
+    }
+
+    p{
+
+        font-size:.97rem;
+
+    }
+
+    button{
+
+        width:215px;
+
+        font-size:.95rem;
+
+    }
+
+}
